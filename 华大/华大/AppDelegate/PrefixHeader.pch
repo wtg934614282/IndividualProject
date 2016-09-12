@@ -1,0 +1,52 @@
+//
+//  PrefixHeader.pch
+
+//
+//  Created by 隆大佶 on 16/7/29.
+//  Copyright © 2016年 HangLong Lv. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+// 第三方
+//#import <MJRefresh.h>
+//#import <MBProgressHUD.h>
+//#import <UIImageView+WebCache.h>
+//#import <Masonry.h>
+//#import <AFNetworking.h>
+#import "YYKit.h"
+
+#import "Masonry.h"
+//// UIColor 类的扩展
+#import "UIColor+Categpry.h"
+#import "UINavigationBar+category.h"
+#import "UIImage+Category.h"
+//#import "Customkongjian.h"
+//#import "GetUrl.h"
+//#import "GetData.h"
+//#import "MJExtension.h"
+//#import "LoginViewController.h"
+//#import "ZFViewController.h"
+//#import "UIView+SDAutoLayout.h"
+//#import "UITableView+SDAutoTableViewCellHeight.h"
+
+
+
+//#define WEAKSELF(weakSelf) __weak typeof(*&self)weakSelf = self;
+//
+//#define   KWidth(width) width/750.f * KScreenWidth
+//
+
+#define   KColorMainGreen [UIColor colorWithRed:19/255.f green:68/255.f blue:110/255.f alpha:1.0];
+
+
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+
+
+
+#define KTOKEN @"KTOKEN"
+#endif

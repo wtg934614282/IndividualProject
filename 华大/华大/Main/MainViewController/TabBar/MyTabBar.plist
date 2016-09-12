@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>ClassName</key>
+		<string>NoticeViewController</string>
+		<key>Image1</key>
+		<string>message_1</string>
+		<key>Image2</key>
+		<string>message_2</string>
+		<key>title</key>
+		<string>通知</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>NewsViewController</string>
+		<key>Image1</key>
+		<string>task_management_1</string>
+		<key>Image2</key>
+		<string>task_management_2</string>
+		<key>title</key>
+		<string>新闻</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>HomePageViewController</string>
+		<key>Image1</key>
+		<string>message_1</string>
+		<key>Image2</key>
+		<string>message_2</string>
+		<key>title</key>
+		<string>首页</string>
+	</dict>
+	<dict>
+		<key>ClassName</key>
+		<string>MineViewController</string>
+		<key>Image1</key>
+		<string>business_center_1</string>
+		<key>Image2</key>
+		<string>business_center_2</string>
+		<key>title</key>
+		<string>我的</string>
+	</dict>
+</array>
+</plist>
