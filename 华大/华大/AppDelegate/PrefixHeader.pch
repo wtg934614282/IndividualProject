@@ -37,8 +37,8 @@
 
 //#define WEAKSELF(weakSelf) __weak typeof(*&self)weakSelf = self;
 //
-//#define   KWidth(width) width/750.f * KScreenWidth
-//
+
+#define KColor(a,b,c)  [UIColor colorWithRed:a/255.f green:b/255.f blue:c/255.f alpha:1.0]
 
 #define   KColorMainGreen [UIColor colorWithRed:19/255.f green:68/255.f blue:110/255.f alpha:1.0];
 

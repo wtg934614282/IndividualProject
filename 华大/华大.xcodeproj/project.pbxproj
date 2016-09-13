@@ -206,6 +206,9 @@
 		CF9C71ED1D825BCB00FDC95A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71EC1D825BCB00FDC95A /* NewsViewController.m */; };
 		CF9C71F31D82648C00FDC95A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71F21D82648C00FDC95A /* MineViewController.m */; };
 		CFBDC3DD1D83A87900821FDD /* other2.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBDC3DC1D83A87900821FDD /* other2.m */; };
+		CFD7D8301D87A95A00FE627C /* HomePageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D82F1D87A95A00FE627C /* HomePageCollectionViewCell.m */; };
+		CFD7D8331D87AFF000FE627C /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D8321D87AFF000FE627C /* HomePageModel.m */; };
+		CFD7D8361D87B14C00FE627C /* WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D8351D87B14C00FE627C /* WebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -598,6 +601,12 @@
 		CF9C71F21D82648C00FDC95A /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		CFBDC3DB1D83A87900821FDD /* other2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = other2.h; sourceTree = "<group>"; };
 		CFBDC3DC1D83A87900821FDD /* other2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = other2.m; sourceTree = "<group>"; };
+		CFD7D82E1D87A95A00FE627C /* HomePageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCollectionViewCell.h; sourceTree = "<group>"; };
+		CFD7D82F1D87A95A00FE627C /* HomePageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCollectionViewCell.m; sourceTree = "<group>"; };
+		CFD7D8311D87AFF000FE627C /* HomePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageModel.h; sourceTree = "<group>"; };
+		CFD7D8321D87AFF000FE627C /* HomePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageModel.m; sourceTree = "<group>"; };
+		CFD7D8341D87B14C00FE627C /* WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView.h; sourceTree = "<group>"; };
+		CFD7D8351D87B14C00FE627C /* WebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebView.m; sourceTree = "<group>"; };
 		CFE89DAC1D8250110003D006 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1190,6 +1199,8 @@
 			children = (
 				CF9C71E21D825B0F00FDC95A /* HomePageViewController.h */,
 				CF9C71E31D825B0F00FDC95A /* HomePageViewController.m */,
+				CFD7D8341D87B14C00FE627C /* WebView.h */,
+				CFD7D8351D87B14C00FE627C /* WebView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1197,6 +1208,8 @@
 		CF1CFA421D8256E100FFF45E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CFD7D8311D87AFF000FE627C /* HomePageModel.h */,
+				CFD7D8321D87AFF000FE627C /* HomePageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1204,6 +1217,8 @@
 		CF1CFA431D8256E100FFF45E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CFD7D82E1D87A95A00FE627C /* HomePageCollectionViewCell.h */,
+				CFD7D82F1D87A95A00FE627C /* HomePageCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1896,6 +1911,7 @@
 				CF1CFA561D82572500FFF45E /* UIView_extra.m in Sources */,
 				04A6E8F31D8285A40056E8CE /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				04A6E9321D8285A40056E8CE /* YYTextView.m in Sources */,
+				CFD7D8301D87A95A00FE627C /* HomePageCollectionViewCell.m in Sources */,
 				04A6E8F81D8285A40056E8CE /* NSObject+YYAddForKVO.m in Sources */,
 				CF2842581D824D1C0008BA3C /* MBProgressHUD.m in Sources */,
 				CF2842491D824D140008BA3C /* MJRefreshNormalHeader.m in Sources */,
@@ -1916,6 +1932,7 @@
 				04A6E91A1D8285A40056E8CE /* YYSpriteSheetImage.m in Sources */,
 				04A6E9291D8285A40056E8CE /* NSParagraphStyle+YYText.m in Sources */,
 				04A6E93D1D8285A40056E8CE /* YYTransaction.m in Sources */,
+				CFD7D8331D87AFF000FE627C /* HomePageModel.m in Sources */,
 				CF8BFCFE1D8647DF004916BF /* UIColor+Categpry.m in Sources */,
 				04A6E83C1D82858F0056E8CE /* ViewController+MASAdditions.m in Sources */,
 				CF2841691D824CE20008BA3C /* UIImageView+WebCache.m in Sources */,
@@ -1933,6 +1950,7 @@
 				CF2841D51D824D080008BA3C /* AFNetworkReachabilityManager.m in Sources */,
 				CF28424E1D824D140008BA3C /* UIScrollView+MJExtension.m in Sources */,
 				CF2841D91D824D080008BA3C /* AFURLResponseSerialization.m in Sources */,
+				CFD7D8361D87B14C00FE627C /* WebView.m in Sources */,
 				04A6E90C1D8285A40056E8CE /* YYCache.m in Sources */,
 				04A6E9151D8285A40056E8CE /* YYAnimatedImageView.m in Sources */,
 				CF28423F1D824D140008BA3C /* MJRefreshComponent.m in Sources */,
