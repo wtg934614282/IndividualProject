@@ -11,6 +11,7 @@
 #import "otherViewController.h"
 
 #import "TabBarViewController.h"
+#import "TestViewController.h"
 
 #define KColor(a,b,c)  [UIColor colorWithRed:a/255.f green:b/255.f blue:c/255.f alpha:1.0]
 
@@ -111,6 +112,12 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [tempAppDelegate.LeftSlideVC openLeftViewWithAnimated:NO];//打开左侧抽屉
+    if (indexPath.row==1) {
+        TestViewController *test=[[TestViewController alloc]init];
+        UINavigationController *nacv = [[UINavigationController alloc]initWithRootViewController:test];
+        nacv.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:nacv animated:YES completion:nil];
+    }else{
 
 
     otherViewController *vc = [[otherViewController alloc] init];
@@ -119,7 +126,7 @@
     nacv.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:nacv animated:YES completion:nil];
 
-    
+    }
     
     
 //    CATransition *animation = [CATransition animation];

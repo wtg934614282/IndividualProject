@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0415327D1D87DB6900E3E59C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0415327C1D87DB6900E3E59C /* TestViewController.m */; };
 		04A6E8321D82858F0056E8CE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A6E8181D82858F0056E8CE /* Info.plist */; };
 		04A6E8331D82858F0056E8CE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6E81A1D82858F0056E8CE /* MASCompositeConstraint.m */; };
 		04A6E8341D82858F0056E8CE /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6E81D1D82858F0056E8CE /* MASConstraint.m */; };
@@ -212,6 +213,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0415327B1D87DB6900E3E59C /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = "华大/Main/LeftSIdeViewController/Notice/TestViewController.h"; sourceTree = SOURCE_ROOT; };
+		0415327C1D87DB6900E3E59C /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = "华大/Main/LeftSIdeViewController/Notice/TestViewController.m"; sourceTree = SOURCE_ROOT; };
 		04A6E8181D82858F0056E8CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A6E8191D82858F0056E8CE /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		04A6E81A1D82858F0056E8CE /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -1030,6 +1033,8 @@
 		CF1CFA2C1D8256E100FFF45E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0415327B1D87DB6900E3E59C /* TestViewController.h */,
+				0415327C1D87DB6900E3E59C /* TestViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2009,6 +2014,7 @@
 				04A6E92F1D8285A40056E8CE /* YYTextRunDelegate.m in Sources */,
 				CF1CFA611D82597200FFF45E /* otherViewController.m in Sources */,
 				CF1CFA551D82572500FFF45E /* LeftSlideViewController.m in Sources */,
+				0415327D1D87DB6900E3E59C /* TestViewController.m in Sources */,
 				CF2841D41D824D080008BA3C /* AFHTTPSessionManager.m in Sources */,
 				CF2842361D824D140008BA3C /* NSObject+MJClass.m in Sources */,
 				CF2842591D824D1C0008BA3C /* README.mdown in Sources */,
