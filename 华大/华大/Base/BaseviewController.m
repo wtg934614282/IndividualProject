@@ -73,6 +73,11 @@
     
     
 }
+
+
+
+
+
 //重写self.view的方法，开始点击
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"开始触摸");
