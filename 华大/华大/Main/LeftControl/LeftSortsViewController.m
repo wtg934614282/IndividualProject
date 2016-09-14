@@ -23,24 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self initButtomView];
-    
-//    UIImageView *imageview = [[UIImageView alloc] initWithFrame:self.view.bounds];
-//    imageview.image = [UIImage imageNamed:@"leftbackiamge"];
-//    [self.view addSubview:imageview];
     self.view.backgroundColor = KColorMainGreen;
     
     UITableView *tableview = [[UITableView alloc] init];
     self.tableview = tableview;
-    tableview.frame = self.view.bounds;
+    tableview.frame = CGRectMake(0, 0, self.view.frame.size.width, KScreenHeight-49);
     tableview.dataSource = self;
     tableview.delegate  = self;
     tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:tableview];
     
     
-    
+ 
+    [self initButtomView];
+
 }
 
 -(void)initButtomView{
@@ -52,9 +48,9 @@
     [self returnLineWithFram:CGRectMake(0, 0, self.view.bounds.size.width, 1) superView:buttom color:KColor(130, 130, 130)];
     //三个按钮
 
-    [buttom addSubview:[self addButonWithIndex:0 title:@"设置" imageName:@"set"]];
-    [buttom addSubview:[self addButonWithIndex:1 title:@"登陆" imageName:@"set"]];
-    [buttom addSubview:[self addButonWithIndex:2 title:@"搜索" imageName:@"set"]];
+    [buttom addSubview:[self addButonWithIndex:0 title:@"设置" imageName:@"iconfont-shezhi"]];
+    [buttom addSubview:[self addButonWithIndex:1 title:@"登陆" imageName:@"iconfont-denglu"]];
+    [buttom addSubview:[self addButonWithIndex:2 title:@"搜索" imageName:@"iconfont-sousuo"]];
 }
 
 
@@ -154,7 +150,7 @@
 //头视图
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 100;
+    return 90;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -163,8 +159,8 @@
    
     view.backgroundColor = [UIColor clearColor];
     
-    UIImageView *imageView = [[UIImageView alloc]initWithImage: [UIImage imageNamed:@"login_logo"]];
-    imageView.frame = CGRectMake(30,20, 70, 70);
+    UIImageView *imageView = [[UIImageView alloc]initWithImage: [UIImage imageNamed:@"华大"]];
+    imageView.frame = CGRectMake(30,30, 51, 51);
     [view addSubview:imageView];
     return view;
 }
@@ -188,11 +184,10 @@
 
     
     UIImageView *imageview3 = [[UIImageView alloc]initWithFrame:CGRectMake(12, 5, 25, 25)];
-    imageview3.userInteractionEnabled  = YES ;
     imageview3.image = [UIImage imageNamed:imageNmae] ;
     [btn3 addSubview:imageview3];
-//    [btn3 setBackgroundImage:[UIImage imageWithColor:[[UIColor grayColor]colorWithAlphaComponent:0.3]] forState:UIControlStateHighlighted];
-    
+//    imageview3.userInteractionEnabled  =NO;
+
     
     UILabel *lable3 = [[UILabel alloc]initWithFrame:CGRectMake(0 ,49-14, 49, 12)];
     lable3.text = title;
@@ -204,7 +199,11 @@
 }
 -(void)btnpressed:(UIButton *)sender{
     if (sender.tag == 100) {
-        
+        NSLog(@"设置");
+    }else if (sender.tag == 101){
+        NSLog(@"登陆");
+    }else if (sender.tag == 102){
+        NSLog(@"搜索");
     }
 }
 

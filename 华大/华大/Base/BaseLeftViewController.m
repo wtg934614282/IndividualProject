@@ -34,14 +34,14 @@
     }
     
     
-    [self.navigationController.navigationBar alphaNavigationBarView:[[UIColor whiteColor] colorWithAlphaComponent:1]];
+    [self.navigationController.navigationBar alphaNavigationBarView:[KColorMainGreen colorWithAlphaComponent:1]];
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self ;
     
     if (self.navigationController.viewControllers.count > 1) {
         
         
         //用图片创建item
-        UIImage *image =[UIImage imageNamed:@"back"];
+        UIImage *image =[UIImage imageNamed:@"返回按钮2"];
         //用图片最原始的模式
         image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
@@ -52,8 +52,8 @@
         //主界面的导航栏
         
         UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        menuBtn.frame = CGRectMake(0, 0, 20, 18);
-        [menuBtn setBackgroundImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        menuBtn.frame = CGRectMake(0, 0, 23, 23);
+        [menuBtn setBackgroundImage:[UIImage imageNamed:@"返回按钮2"] forState:UIControlStateNormal];
         [menuBtn addTarget:self action:@selector(dissmissVC) forControlEvents:UIControlEventTouchUpInside];
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuBtn];
     }

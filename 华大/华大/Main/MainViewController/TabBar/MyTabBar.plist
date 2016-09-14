@@ -6,9 +6,9 @@
 		<key>ClassName</key>
 		<string>NoticeViewController</string>
 		<key>Image1</key>
-		<string>message_1</string>
+		<string>iconfont-tongzhi</string>
 		<key>Image2</key>
-		<string>message_2</string>
+		<string>iconfont-tongzhi</string>
 		<key>title</key>
 		<string>通知</string>
 	</dict>
@@ -16,9 +16,9 @@
 		<key>ClassName</key>
 		<string>NewsViewController</string>
 		<key>Image1</key>
-		<string>task_management_1</string>
+		<string>iconfont-xinwen</string>
 		<key>Image2</key>
-		<string>task_management_2</string>
+		<string>iconfont-xinwen</string>
 		<key>title</key>
 		<string>新闻</string>
 	</dict>
@@ -26,9 +26,9 @@
 		<key>ClassName</key>
 		<string>HomePageViewController</string>
 		<key>Image1</key>
-		<string>message_1</string>
+		<string>iconfont-shouye</string>
 		<key>Image2</key>
-		<string>message_2</string>
+		<string>iconfont-shouye</string>
 		<key>title</key>
 		<string>首页</string>
 	</dict>
@@ -36,9 +36,9 @@
 		<key>ClassName</key>
 		<string>MineViewController</string>
 		<key>Image1</key>
-		<string>business_center_1</string>
+		<string>iconfont-wode</string>
 		<key>Image2</key>
-		<string>business_center_2</string>
+		<string>iconfont-wode</string>
 		<key>title</key>
 		<string>我的</string>
 	</dict>

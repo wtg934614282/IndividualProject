@@ -46,7 +46,7 @@
         
 
         //用图片创建item
-        UIImage *image =[UIImage imageNamed:@"back"];
+        UIImage *image =[UIImage imageNamed:@"返回按钮"];
         //用图片最原始的模式
         image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
@@ -57,11 +57,20 @@
         //主界面的导航栏
         
         UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        menuBtn.frame = CGRectMake(0, 0, 20, 18);
+        menuBtn.frame = CGRectMake(0, 0, 32, 32);
         [menuBtn setBackgroundImage:[UIImage imageNamed:@"index_menu"] forState:UIControlStateNormal];
         [menuBtn addTarget:self action:@selector(openOrCloseLeftList) forControlEvents:UIControlEventTouchUpInside];
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuBtn];
+    
+    
+        UIButton *menuBtn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+        menuBtn2.frame = CGRectMake(0, 0, 54, 33);
+//        [menuBtn2 setBackgroundImage:[UIImage imageNamed:@"华大"] forState:UIControlStateNormal];
+        [menuBtn2 setImage:[UIImage imageNamed:@"华大"] forState:UIControlStateNormal];
+        menuBtn2.userInteractionEnabled = NO;
+         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuBtn2];
     }
+    
     
 }
 //重写self.view的方法，开始点击

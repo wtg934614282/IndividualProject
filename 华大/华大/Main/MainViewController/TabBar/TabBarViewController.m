@@ -50,7 +50,7 @@
         vc.tabBarItem.title = model.title;
         vc.tabBarItem.image = [[UIImage imageNamed:model.image1]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         vc.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@",model.image2]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        self.tabBar.tintColor = [UIColor  getColor:@"#a16dda"];
+        self.tabBar.tintColor = KColorMainGreen;
 
         
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];

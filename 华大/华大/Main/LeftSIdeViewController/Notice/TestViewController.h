@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface TestViewController : UIViewController
+#import "BaseLeftViewController.h"
+@interface TestViewController : BaseLeftViewController
 
 @end

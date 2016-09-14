@@ -26,7 +26,7 @@
 #import "UIImage+Category.h"
 //#import "Customkongjian.h"
 //#import "GetUrl.h"
-//#import "GetData.h"
+#import "GetData.h"
 //#import "MJExtension.h"
 //#import "LoginViewController.h"
 //#import "ZFViewController.h"
@@ -38,13 +38,13 @@
 //#define WEAKSELF(weakSelf) __weak typeof(*&self)weakSelf = self;
 //
 
-#define KColor(a,b,c)  [UIColor colorWithRed:a/255.f green:b/255.f blue:c/255.f alpha:1.0]
+#define KColor(a,b,c)   [UIColor colorWithRed:a/255.f green:b/255.f blue:c/255.f alpha:1.0]
 
-#define   KColorMainGreen [UIColor colorWithRed:19/255.f green:68/255.f blue:110/255.f alpha:1.0];
+#define KColorMainGreen [UIColor colorWithRed:19/255.f green:68/255.f blue:110/255.f alpha:1.0]
 
 
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
-#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KScreenWidth  [UIScreen mainScreen].bounds.size.width
 
 
 
