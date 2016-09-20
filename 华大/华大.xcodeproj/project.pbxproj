@@ -106,6 +106,7 @@
 		04A6E9461D8288630056E8CE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A6E9451D8288630056E8CE /* CoreFoundation.framework */; };
 		04A6E9481D8288730056E8CE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A6E9471D8288730056E8CE /* CoreImage.framework */; };
 		04A6E94A1D8288A80056E8CE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A6E9491D8288A80056E8CE /* libz.tbd */; };
+		CF16E8D21D90E58D0009AD8E /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16E8D11D90E58D0009AD8E /* NewsDetailViewController.m */; };
 		CF1CFA141D8253DF00FFF45E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1CFA131D8253DF00FFF45E /* AppDelegate.m */; };
 		CF1CFA1F1D82556E00FFF45E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1CFA1E1D82556E00FFF45E /* Launch Screen.storyboard */; };
 		CF1CFA551D82572500FFF45E /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1CFA521D82572500FFF45E /* LeftSlideViewController.m */; };
@@ -199,6 +200,8 @@
 		CF992C821D8268D800F160A3 /* XRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF992C801D8268D800F160A3 /* XRCarouselView.m */; };
 		CF992C841D826AB300F160A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF992C831D826AB300F160A3 /* Assets.xcassets */; };
 		CF992C861D82992A00F160A3 /* 工作笔记 in Sources */ = {isa = PBXBuildFile; fileRef = CF992C851D82992A00F160A3 /* 工作笔记 */; };
+		CF9BA33E1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9BA33D1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m */; };
+		CF9BA3451D8FF97A00EFC4B6 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9BA3441D8FF97A00EFC4B6 /* NewsTableViewCell.m */; };
 		CF9C71DF1D825A2600FDC95A /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71DB1D825A2600FDC95A /* TabBarViewController.m */; };
 		CF9C71E01D825A2600FDC95A /* MyTabBar.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF9C71DC1D825A2600FDC95A /* MyTabBar.plist */; };
 		CF9C71E11D825A2600FDC95A /* TabBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71DE1D825A2600FDC95A /* TabBarModel.m */; };
@@ -209,7 +212,6 @@
 		CFBDC3DD1D83A87900821FDD /* other2.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBDC3DC1D83A87900821FDD /* other2.m */; };
 		CFD7D8301D87A95A00FE627C /* HomePageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D82F1D87A95A00FE627C /* HomePageCollectionViewCell.m */; };
 		CFD7D8331D87AFF000FE627C /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D8321D87AFF000FE627C /* HomePageModel.m */; };
-		CFD7D8361D87B14C00FE627C /* WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D8351D87B14C00FE627C /* WebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -411,6 +413,8 @@
 		04A6E9451D8288630056E8CE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		04A6E9471D8288730056E8CE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		04A6E9491D8288A80056E8CE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CF16E8D01D90E58D0009AD8E /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		CF16E8D11D90E58D0009AD8E /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		CF1CFA121D8253DF00FFF45E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CF1CFA131D8253DF00FFF45E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CF1CFA151D82544700FFF45E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -589,6 +593,10 @@
 		CF992C801D8268D800F160A3 /* XRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRCarouselView.m; sourceTree = "<group>"; };
 		CF992C831D826AB300F160A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF992C851D82992A00F160A3 /* 工作笔记 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "工作笔记"; sourceTree = "<group>"; };
+		CF9BA33C1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCollectionViewCell2.h; sourceTree = "<group>"; };
+		CF9BA33D1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCollectionViewCell2.m; sourceTree = "<group>"; };
+		CF9BA3431D8FF97A00EFC4B6 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTableViewCell.h; path = "华大/Main/MainViewController/HomePage/View/NewsTableViewCell.h"; sourceTree = SOURCE_ROOT; };
+		CF9BA3441D8FF97A00EFC4B6 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTableViewCell.m; path = "华大/Main/MainViewController/HomePage/View/NewsTableViewCell.m"; sourceTree = SOURCE_ROOT; };
 		CF9C71DA1D825A2600FDC95A /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		CF9C71DB1D825A2600FDC95A /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		CF9C71DC1D825A2600FDC95A /* MyTabBar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MyTabBar.plist; sourceTree = "<group>"; };
@@ -608,8 +616,6 @@
 		CFD7D82F1D87A95A00FE627C /* HomePageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCollectionViewCell.m; sourceTree = "<group>"; };
 		CFD7D8311D87AFF000FE627C /* HomePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageModel.h; sourceTree = "<group>"; };
 		CFD7D8321D87AFF000FE627C /* HomePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageModel.m; sourceTree = "<group>"; };
-		CFD7D8341D87B14C00FE627C /* WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebView.h; sourceTree = "<group>"; };
-		CFD7D8351D87B14C00FE627C /* WebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebView.m; sourceTree = "<group>"; };
 		CFE89DAC1D8250110003D006 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1204,8 +1210,8 @@
 			children = (
 				CF9C71E21D825B0F00FDC95A /* HomePageViewController.h */,
 				CF9C71E31D825B0F00FDC95A /* HomePageViewController.m */,
-				CFD7D8341D87B14C00FE627C /* WebView.h */,
-				CFD7D8351D87B14C00FE627C /* WebView.m */,
+				CF16E8D01D90E58D0009AD8E /* NewsDetailViewController.h */,
+				CF16E8D11D90E58D0009AD8E /* NewsDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1224,6 +1230,8 @@
 			children = (
 				CFD7D82E1D87A95A00FE627C /* HomePageCollectionViewCell.h */,
 				CFD7D82F1D87A95A00FE627C /* HomePageCollectionViewCell.m */,
+				CF9BA33C1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.h */,
+				CF9BA33D1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1290,6 +1298,8 @@
 		CF1CFA4B1D8256E100FFF45E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF9BA3431D8FF97A00EFC4B6 /* NewsTableViewCell.h */,
+				CF9BA3441D8FF97A00EFC4B6 /* NewsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1929,6 +1939,7 @@
 				CF2842431D824D140008BA3C /* MJRefreshAutoNormalFooter.m in Sources */,
 				CF28423D1D824D140008BA3C /* MJRefreshAutoFooter.m in Sources */,
 				CF8BFCF51D8647DF004916BF /* Customkongjian.m in Sources */,
+				CF9BA3451D8FF97A00EFC4B6 /* NewsTableViewCell.m in Sources */,
 				04A6E90E1D8285A40056E8CE /* YYKVStorage.m in Sources */,
 				CF2841631D824CE20008BA3C /* SDWebImageManager.m in Sources */,
 				04A6E91F1D8285A40056E8CE /* YYTextContainerView.m in Sources */,
@@ -1955,7 +1966,6 @@
 				CF2841D51D824D080008BA3C /* AFNetworkReachabilityManager.m in Sources */,
 				CF28424E1D824D140008BA3C /* UIScrollView+MJExtension.m in Sources */,
 				CF2841D91D824D080008BA3C /* AFURLResponseSerialization.m in Sources */,
-				CFD7D8361D87B14C00FE627C /* WebView.m in Sources */,
 				04A6E90C1D8285A40056E8CE /* YYCache.m in Sources */,
 				04A6E9151D8285A40056E8CE /* YYAnimatedImageView.m in Sources */,
 				CF28423F1D824D140008BA3C /* MJRefreshComponent.m in Sources */,
@@ -1993,6 +2003,7 @@
 				CF2841671D824CE20008BA3C /* UIImage+MultiFormat.m in Sources */,
 				04A6E92C1D8285A40056E8CE /* YYTextAttribute.m in Sources */,
 				CF2841601D824CE20008BA3C /* SDWebImageDecoder.m in Sources */,
+				CF16E8D21D90E58D0009AD8E /* NewsDetailViewController.m in Sources */,
 				04A6E90F1D8285A40056E8CE /* YYMemoryCache.m in Sources */,
 				04A6E8FA1D8285A40056E8CE /* NSThread+YYAdd.m in Sources */,
 				04A6E93B1D8285A40056E8CE /* YYThreadSafeDictionary.m in Sources */,
@@ -2065,6 +2076,7 @@
 				CF2842331D824D140008BA3C /* MJProperty.m in Sources */,
 				04A6E8FE1D8285A40056E8CE /* UIApplication+YYAdd.m in Sources */,
 				CF8BFCF91D8647DF004916BF /* GetData.m in Sources */,
+				CF9BA33E1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m in Sources */,
 				04A6E8FD1D8285A40056E8CE /* YYCGUtilities.m in Sources */,
 				CF28416A1D824CE20008BA3C /* UIView+WebCacheOperation.m in Sources */,
 				04A6E90D1D8285A40056E8CE /* YYDiskCache.m in Sources */,

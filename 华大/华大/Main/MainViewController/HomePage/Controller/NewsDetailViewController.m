@@ -1,60 +1,80 @@
 //
-//  WebView.m
-//  大学帮帮1.0
+//  NewsDetailViewController.m
+//  华大
 //
-//  Created by 隆大佶 on 16/1/27.
-//  Copyright © 2016年 隆大佶. All rights reserved.
+//  Created by 隆大佶 on 16/9/20.
+//  Copyright © 2016年 HangLong Lv. All rights reserved.
 //
 
-#import "WebView.h"
+#import "NewsDetailViewController.h"
 
-
-@interface WebView ()<UIWebViewDelegate>
-@end
-
-@implementation WebView
+@implementation NewsDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     [self initWithWEb];
-    if (![self.FROM isEqualToString:@"click_web_url"]) {
-   
-
-        self.title = @"任务详情";
-    }
-   
-
+ 
+    [self rightButton];
+    
 }
 
 #pragma mark - 右边
 -(void)rightButton{
+     CGFloat width = [self sizeWithText:@"(12)" font:[UIFont systemFontOfSize:12] maxW:MAXFLOAT].width;
+    
     UIButton *butr = [UIButton buttonWithType:UIButtonTypeCustom];
-    butr.frame = CGRectMake(0, 0, 50, 40);
-    [butr addTarget:self action:@selector(report) forControlEvents:UIControlEventTouchUpInside];
-    [butr setImage:[UIImage imageNamed:@"icon_more"] forState:UIControlStateNormal];
-    butr.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0,-30 );
+    butr.frame = CGRectMake(0, 0, 14+width+6+3, 44);
+//    butr.backgroundColor = [UIColor redColor];
+    [butr addTarget:self action:@selector(xiaoxi) forControlEvents:UIControlEventTouchUpInside];
+    butr.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0,-28 );
+    
+    
+    UIImageView *imageview3 = [[UIImageView alloc]initWithFrame:CGRectMake(3, 14, 14, 16)];
+    imageview3.image = [UIImage imageNamed:@"iconfont-xx-xiaoxi"] ;
+    [butr addSubview:imageview3];
+    //        imageview3.userInteractionEnabled  =NO;
+    
+    UILabel *lable3 = [[UILabel alloc]init];
+    lable3.text = @"(12)";
+    lable3.frame = CGRectMake( 3+14+3,14, width, 16);
+    lable3.textColor = KColor(102, 102, 102);
+    lable3.font = [UIFont systemFontOfSize:12];
+    lable3.textAlignment = NSTextAlignmentCenter;
+    [butr addSubview:lable3];
+    
+    
+
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:butr];
 }
 
--(void)report{
- 
+// 字符串高度的计算
+- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxW:(CGFloat)maxW
+{
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSFontAttributeName] = font;
+    CGSize maxSize = CGSizeMake(maxW, 10000);
+    return [text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
+}
+
+-(void)xiaoxi{
+    
 }
 
 
 
 -(void)initWithWEb{
     self.automaticallyAdjustsScrollViewInsets=NO;
-
+    
     UIWebView *web = [[UIWebView alloc]init];
-    web.delegate = self;
+//    web.delegate = self;
     web.frame = CGRectMake(0, 64, KScreenWidth, KScreenHeight-64);
     NSLog(@"self.url = %@", self.url);
     
     NSString *str = [NSString stringWithFormat:@"self.url"];
     NSLog(@"%@",[str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]);
-
-//     [self.url stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]
+    
+    //     [self.url stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]
     NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:[self.url stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]]];
     [self.view addSubview: web];
     [web loadRequest:request];
@@ -68,7 +88,7 @@
 ////    _HUD.labelText = @"网络请求超时";
 ////    _HUD.labelFont = [UIFont systemFontOfSize:14];
 //    _HUD.mode = MBProgressHUDModeIndeterminate;
-//    
+//
 ////    [_HUD showAnimated:YES whileExecutingBlock:^{
 ////        sleep(2);
 ////    } completionBlock:^{
@@ -83,7 +103,7 @@
 //        _holdLab.textColor = [UIColor grayColor];
 //        [weakSelf.view addSubview:_holdLab];
 //    }];
-//    
+//
 //}
 //
 //-(void)webViewDidFinishLoad:(UIWebView *)webView{
@@ -113,8 +133,5 @@
 //        [HUDDD removeFromSuperview];
 //    }];
 //}
-
-
-
 
 @end

@@ -10,7 +10,12 @@
 
 @interface HomePageModel : NSObject
 
-@property(nonatomic,strong)NSString *title;
+@property(nonatomic,strong)NSString *bumen;
+@property(nonatomic,strong)NSString *newid;
+@property(nonatomic,strong)NSString *newimage;
+@property(nonatomic,strong)NSString *newtitle;
+@property(nonatomic,strong)NSString *pinglunnum;
+@property(nonatomic,strong)NSString *shijian;
 
 
 

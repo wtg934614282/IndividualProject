@@ -22,24 +22,25 @@
     
     self.view.backgroundColor = [UIColor getColor:@"#f5f5f5"];
     // 取出导航栏的线
-    if ([self.navigationController.navigationBar respondsToSelector:@selector( setBackgroundImage:forBarMetrics:)]){
-        NSArray *list=self.navigationController.navigationBar.subviews;
-        for (id obj in list) {
-            if ([obj isKindOfClass:[UIImageView class]]) {
-                UIImageView *imageView=(UIImageView *)obj;
-                NSArray *list2=imageView.subviews;
-                for (id obj2 in list2) {
-                    if ([obj2 isKindOfClass:[UIImageView class]]) {
-                        UIImageView *imageView2=(UIImageView *)obj2;
-                        imageView2.hidden=YES;
-                    }
-                }
-            }
-        }
-    }
+//    if ([self.navigationController.navigationBar respondsToSelector:@selector( setBackgroundImage:forBarMetrics:)]){
+//        NSArray *list=self.navigationController.navigationBar.subviews;
+//        for (id obj in list) {
+//            if ([obj isKindOfClass:[UIImageView class]]) {
+//                UIImageView *imageView=(UIImageView *)obj;
+//                NSArray *list2=imageView.subviews;
+//                for (id obj2 in list2) {
+//                    if ([obj2 isKindOfClass:[UIImageView class]]) {
+//                        UIImageView *imageView2=(UIImageView *)obj2;
+//                        imageView2.hidden=YES;
+//                    }
+//                }
+//            }
+//        }
+//    }
 
  
-    [self.navigationController.navigationBar alphaNavigationBarView:[[UIColor whiteColor] colorWithAlphaComponent:1]];
+//    [self.navigationController.navigationBar alphaNavigationBarView:[[UIColor whiteColor] colorWithAlphaComponent:1]];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self ;
  
     if (self.navigationController.viewControllers.count > 1) {
@@ -64,10 +65,11 @@
     
     
         UIButton *menuBtn2 = [UIButton buttonWithType:UIButtonTypeCustom];
-        menuBtn2.frame = CGRectMake(0, 0, 54, 33);
+        menuBtn2.frame = CGRectMake(0, 0, 90, 45);
 //        [menuBtn2 setBackgroundImage:[UIImage imageNamed:@"华大"] forState:UIControlStateNormal];
         [menuBtn2 setImage:[UIImage imageNamed:@"华大"] forState:UIControlStateNormal];
         menuBtn2.userInteractionEnabled = NO;
+        menuBtn2.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -28);
          self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuBtn2];
     }
     

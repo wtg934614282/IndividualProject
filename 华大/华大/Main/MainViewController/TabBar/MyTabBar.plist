@@ -8,7 +8,7 @@
 		<key>Image1</key>
 		<string>iconfont-tongzhi</string>
 		<key>Image2</key>
-		<string>iconfont-tongzhi</string>
+		<string>iconfont-tongzhi-1</string>
 		<key>title</key>
 		<string>通知</string>
 	</dict>
@@ -18,7 +18,7 @@
 		<key>Image1</key>
 		<string>iconfont-xinwen</string>
 		<key>Image2</key>
-		<string>iconfont-xinwen</string>
+		<string>iconfont-xinwen-1</string>
 		<key>title</key>
 		<string>新闻</string>
 	</dict>
@@ -28,7 +28,7 @@
 		<key>Image1</key>
 		<string>iconfont-shouye</string>
 		<key>Image2</key>
-		<string>iconfont-shouye</string>
+		<string>iconfont-shouye-1</string>
 		<key>title</key>
 		<string>首页</string>
 	</dict>
@@ -38,7 +38,7 @@
 		<key>Image1</key>
 		<string>iconfont-wode</string>
 		<key>Image2</key>
-		<string>iconfont-wode</string>
+		<string>iconfont-wode-1</string>
 		<key>title</key>
 		<string>我的</string>
 	</dict>

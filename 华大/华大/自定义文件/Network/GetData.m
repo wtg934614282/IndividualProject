@@ -32,31 +32,27 @@
     //2.设置解析格式，默认json
     manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingMutableContainers];
     //3.判断网络状况
-    AFNetworkReachabilityManager *netManager = [AFNetworkReachabilityManager sharedManager];
+//    AFNetworkReachabilityManager *netManager = [AFNetworkReachabilityManager sharedManager];
+//    [netManager startMonitoring];  //开始监听
+//    [netManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
+//        if (status == AFNetworkReachabilityStatusNotReachable)
+//        {
+//            //showAlert
+////            [[[UIAlertView alloc]initWithTitle:@"提示" message:@"网络链接错误,请检查网络链接" delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil]show];
+//         
+//        
+//        }else if (status == AFNetworkReachabilityStatusUnknown){
+//            NSLog(@"未知网络");
+//        }else if (status == AFNetworkReachabilityStatusReachableViaWWAN){
+//            NSLog(@"WiFi");
+//        }else if (status == AFNetworkReachabilityStatusReachableViaWiFi){
+//            NSLog(@"手机网络");
+//        }
+//    }];
+    
     
     [manager.securityPolicy setAllowInvalidCertificates:YES];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", nil];
-
-    
-    
-    [netManager startMonitoring];  //开始监听
-    [netManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
-        if (status == AFNetworkReachabilityStatusNotReachable)
-        {
-            //showAlert
-//            [[[UIAlertView alloc]initWithTitle:@"提示" message:@"网络链接错误,请检查网络链接" delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil]show];
-         
-        
-        }else if (status == AFNetworkReachabilityStatusUnknown){
-            NSLog(@"未知网络");
-        }else if (status == AFNetworkReachabilityStatusReachableViaWWAN){
-            NSLog(@"WiFi");
-        }else if (status == AFNetworkReachabilityStatusReachableViaWiFi){
-            NSLog(@"手机网络");
-        }
-    }];
-    
-    
     
     // 4.get请求
     if ([[method uppercaseString] isEqualToString:@"GET"]) {
@@ -70,6 +66,8 @@
                  if (success != nil)
                  {
                      success(responseObject);
+                     NSLog (@"%@",responseObject);
+
                  }
              }
              failure:^(AFHTTPRequestOperation *operation, NSError *error) {

@@ -1,17 +1,19 @@
- //
-//  HomePageCollectionViewCell.m
+//
+//  HomePageCollectionViewCell2.m
 //  华大
 //
-//  Created by 隆大佶 on 16/9/13.
+//  Created by 隆大佶 on 16/9/19.
 //  Copyright © 2016年 HangLong Lv. All rights reserved.
 //
 
-#import "HomePageCollectionViewCell.h"
-@interface HomePageCollectionViewCell ()
+#import "HomePageCollectionViewCell2.h"
+
+@interface HomePageCollectionViewCell2 ()
 
 @property(nonatomic,strong)UIImageView *imageView;
 @property(nonatomic,strong)UILabel *titleLabel;
 
+ 
 
 @property(nonatomic,strong)UIImageView *timeImage;
 @property(nonatomic,strong)UIImageView *commentImage;
@@ -22,13 +24,13 @@
 @property(nonatomic,strong)UILabel *pensonLabel;
 
 @end
-@implementation HomePageCollectionViewCell
+@implementation HomePageCollectionViewCell2
 
 -(instancetype)initWithFrame:(CGRect)frame{
-     self = [super initWithFrame:frame];
+    self = [super initWithFrame:frame];
     if (self) {
         self.contentView.backgroundColor = [UIColor whiteColor];
-        
+
         self.imageView = [[UIImageView alloc]init];
         [self.contentView addSubview:self.imageView];
         
@@ -69,7 +71,7 @@
         
         
         
-
+        
     }
     return self;
 }
@@ -87,52 +89,35 @@
     self.titleLabel.text=_model.newtitle;
     
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:_model.newimage]];
+    
  
-
+    
+    
 }
 
 -(void)layoutSubviews{
     CGFloat width = self.contentView.size.width;
-    self.imageView.frame = CGRectMake(0, 0, width, 120);
     
-    self.titleLabel.frame = CGRectMake(8, CGRectGetMaxY(self.imageView.frame), width-16, 40);
+    self.titleLabel.frame = CGRectMake(8, 0, width-16, 40);
     
-    CGFloat titleLabelY =  CGRectGetMaxY(self.titleLabel.frame);
-    self.pensonImage.frame = CGRectMake(8, titleLabelY, 12, 12);
-    self.pensonLabel.frame = CGRectMake(20+1, titleLabelY, 50, 12);
-    self.timeImage.frame = CGRectMake(70, titleLabelY, 12, 12);
-    self.timeLabel.frame = CGRectMake(82+1, titleLabelY, 50, 12);
-    self.commentImage.frame = CGRectMake(132, titleLabelY, 12, 12);
-    self.commentLabel.frame = CGRectMake(144+1, titleLabelY, 50, 12);
+    CGFloat titleLabelY =  (self.frame.size.height-CGRectGetMaxY(self.titleLabel.frame)-120-12)*0.5 + CGRectGetMaxY(self.titleLabel.frame);
     
-   
+    self.timeImage.frame = CGRectMake(8, titleLabelY, 12, 12);
+    self.timeLabel.frame = CGRectMake(20+1, titleLabelY, 50, 12);
     
+    self.commentImage.frame = CGRectMake(70, titleLabelY, 12, 12);
+    self.commentLabel.frame = CGRectMake(82, titleLabelY, 50, 12);
     
-}
+    self.imageView.frame = CGRectMake(0, self.frame.size.height-120, width, 120);
 
--(void)layoutWithMain{
-  
+
+
 
 }
 
+ 
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
