@@ -187,6 +187,12 @@
 		CF2842571D824D1C0008BA3C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CF2842531D824D1C0008BA3C /* LICENSE */; };
 		CF2842581D824D1C0008BA3C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2842551D824D1C0008BA3C /* MBProgressHUD.m */; };
 		CF2842591D824D1C0008BA3C /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = CF2842561D824D1C0008BA3C /* README.mdown */; };
+		CF748FD51D93DAC1007C2BAA /* HomePageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF748FD21D93DAC1007C2BAA /* HomePageCollectionViewCell.m */; };
+		CF748FD61D93DAC1007C2BAA /* HomePageCollectionViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = CF748FD41D93DAC1007C2BAA /* HomePageCollectionViewCell2.m */; };
+		CF748FE11D93DB7E007C2BAA /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF748FE01D93DB7E007C2BAA /* NewsTableViewCell.m */; };
+		CF748FE41D93DBFF007C2BAA /* NewsCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF748FE31D93DBFF007C2BAA /* NewsCommentModel.m */; };
+		CF748FE71D93DC0F007C2BAA /* NewsCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF748FE61D93DC0F007C2BAA /* NewsCommentTableViewCell.m */; };
+		CF748FEA1D93DC1E007C2BAA /* NewsCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF748FE91D93DC1E007C2BAA /* NewsCommentViewController.m */; };
 		CF8BFCF51D8647DF004916BF /* Customkongjian.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8BFCD91D8647DF004916BF /* Customkongjian.m */; };
 		CF8BFCF61D8647DF004916BF /* FTTMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8BFCDB1D8647DF004916BF /* FTTMenuVC.m */; };
 		CF8BFCF71D8647DF004916BF /* ZYKeyboardUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8BFCDE1D8647DF004916BF /* ZYKeyboardUtil.m */; };
@@ -200,8 +206,6 @@
 		CF992C821D8268D800F160A3 /* XRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF992C801D8268D800F160A3 /* XRCarouselView.m */; };
 		CF992C841D826AB300F160A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF992C831D826AB300F160A3 /* Assets.xcassets */; };
 		CF992C861D82992A00F160A3 /* 工作笔记 in Sources */ = {isa = PBXBuildFile; fileRef = CF992C851D82992A00F160A3 /* 工作笔记 */; };
-		CF9BA33E1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9BA33D1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m */; };
-		CF9BA3451D8FF97A00EFC4B6 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9BA3441D8FF97A00EFC4B6 /* NewsTableViewCell.m */; };
 		CF9C71DF1D825A2600FDC95A /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71DB1D825A2600FDC95A /* TabBarViewController.m */; };
 		CF9C71E01D825A2600FDC95A /* MyTabBar.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF9C71DC1D825A2600FDC95A /* MyTabBar.plist */; };
 		CF9C71E11D825A2600FDC95A /* TabBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71DE1D825A2600FDC95A /* TabBarModel.m */; };
@@ -210,7 +214,6 @@
 		CF9C71ED1D825BCB00FDC95A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71EC1D825BCB00FDC95A /* NewsViewController.m */; };
 		CF9C71F31D82648C00FDC95A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71F21D82648C00FDC95A /* MineViewController.m */; };
 		CFBDC3DD1D83A87900821FDD /* other2.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBDC3DC1D83A87900821FDD /* other2.m */; };
-		CFD7D8301D87A95A00FE627C /* HomePageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D82F1D87A95A00FE627C /* HomePageCollectionViewCell.m */; };
 		CFD7D8331D87AFF000FE627C /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D8321D87AFF000FE627C /* HomePageModel.m */; };
 /* End PBXBuildFile section */
 
@@ -570,6 +573,18 @@
 		CF2842541D824D1C0008BA3C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		CF2842551D824D1C0008BA3C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		CF2842561D824D1C0008BA3C /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
+		CF748FD11D93DAC1007C2BAA /* HomePageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCollectionViewCell.h; sourceTree = "<group>"; };
+		CF748FD21D93DAC1007C2BAA /* HomePageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCollectionViewCell.m; sourceTree = "<group>"; };
+		CF748FD31D93DAC1007C2BAA /* HomePageCollectionViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCollectionViewCell2.h; sourceTree = "<group>"; };
+		CF748FD41D93DAC1007C2BAA /* HomePageCollectionViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCollectionViewCell2.m; sourceTree = "<group>"; };
+		CF748FDF1D93DB7E007C2BAA /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		CF748FE01D93DB7E007C2BAA /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		CF748FE21D93DBFF007C2BAA /* NewsCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCommentModel.h; sourceTree = "<group>"; };
+		CF748FE31D93DBFF007C2BAA /* NewsCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCommentModel.m; sourceTree = "<group>"; };
+		CF748FE51D93DC0F007C2BAA /* NewsCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCommentTableViewCell.h; sourceTree = "<group>"; };
+		CF748FE61D93DC0F007C2BAA /* NewsCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCommentTableViewCell.m; sourceTree = "<group>"; };
+		CF748FE81D93DC1E007C2BAA /* NewsCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCommentViewController.h; sourceTree = "<group>"; };
+		CF748FE91D93DC1E007C2BAA /* NewsCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCommentViewController.m; sourceTree = "<group>"; };
 		CF8BFCD81D8647DF004916BF /* Customkongjian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customkongjian.h; sourceTree = "<group>"; };
 		CF8BFCD91D8647DF004916BF /* Customkongjian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customkongjian.m; sourceTree = "<group>"; };
 		CF8BFCDA1D8647DF004916BF /* FTTMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTMenuVC.h; sourceTree = "<group>"; };
@@ -593,10 +608,6 @@
 		CF992C801D8268D800F160A3 /* XRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRCarouselView.m; sourceTree = "<group>"; };
 		CF992C831D826AB300F160A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF992C851D82992A00F160A3 /* 工作笔记 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "工作笔记"; sourceTree = "<group>"; };
-		CF9BA33C1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCollectionViewCell2.h; sourceTree = "<group>"; };
-		CF9BA33D1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCollectionViewCell2.m; sourceTree = "<group>"; };
-		CF9BA3431D8FF97A00EFC4B6 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTableViewCell.h; path = "华大/Main/MainViewController/HomePage/View/NewsTableViewCell.h"; sourceTree = SOURCE_ROOT; };
-		CF9BA3441D8FF97A00EFC4B6 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTableViewCell.m; path = "华大/Main/MainViewController/HomePage/View/NewsTableViewCell.m"; sourceTree = SOURCE_ROOT; };
 		CF9C71DA1D825A2600FDC95A /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		CF9C71DB1D825A2600FDC95A /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		CF9C71DC1D825A2600FDC95A /* MyTabBar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MyTabBar.plist; sourceTree = "<group>"; };
@@ -612,8 +623,6 @@
 		CF9C71F21D82648C00FDC95A /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		CFBDC3DB1D83A87900821FDD /* other2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = other2.h; sourceTree = "<group>"; };
 		CFBDC3DC1D83A87900821FDD /* other2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = other2.m; sourceTree = "<group>"; };
-		CFD7D82E1D87A95A00FE627C /* HomePageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCollectionViewCell.h; sourceTree = "<group>"; };
-		CFD7D82F1D87A95A00FE627C /* HomePageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCollectionViewCell.m; sourceTree = "<group>"; };
 		CFD7D8311D87AFF000FE627C /* HomePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageModel.h; sourceTree = "<group>"; };
 		CFD7D8321D87AFF000FE627C /* HomePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageModel.m; sourceTree = "<group>"; };
 		CFE89DAC1D8250110003D006 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -1212,6 +1221,8 @@
 				CF9C71E31D825B0F00FDC95A /* HomePageViewController.m */,
 				CF16E8D01D90E58D0009AD8E /* NewsDetailViewController.h */,
 				CF16E8D11D90E58D0009AD8E /* NewsDetailViewController.m */,
+				CF748FE81D93DC1E007C2BAA /* NewsCommentViewController.h */,
+				CF748FE91D93DC1E007C2BAA /* NewsCommentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1221,6 +1232,8 @@
 			children = (
 				CFD7D8311D87AFF000FE627C /* HomePageModel.h */,
 				CFD7D8321D87AFF000FE627C /* HomePageModel.m */,
+				CF748FE21D93DBFF007C2BAA /* NewsCommentModel.h */,
+				CF748FE31D93DBFF007C2BAA /* NewsCommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1228,10 +1241,12 @@
 		CF1CFA431D8256E100FFF45E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CFD7D82E1D87A95A00FE627C /* HomePageCollectionViewCell.h */,
-				CFD7D82F1D87A95A00FE627C /* HomePageCollectionViewCell.m */,
-				CF9BA33C1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.h */,
-				CF9BA33D1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m */,
+				CF748FD11D93DAC1007C2BAA /* HomePageCollectionViewCell.h */,
+				CF748FD21D93DAC1007C2BAA /* HomePageCollectionViewCell.m */,
+				CF748FD31D93DAC1007C2BAA /* HomePageCollectionViewCell2.h */,
+				CF748FD41D93DAC1007C2BAA /* HomePageCollectionViewCell2.m */,
+				CF748FE51D93DC0F007C2BAA /* NewsCommentTableViewCell.h */,
+				CF748FE61D93DC0F007C2BAA /* NewsCommentTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1273,8 +1288,8 @@
 			isa = PBXGroup;
 			children = (
 				CF1CFA491D8256E100FFF45E /* Controller */,
-				CF1CFA4A1D8256E100FFF45E /* Model */,
-				CF1CFA4B1D8256E100FFF45E /* View */,
+				CF748FDD1D93DB73007C2BAA /* Model */,
+				CF748FDE1D93DB73007C2BAA /* View */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -1286,22 +1301,6 @@
 				CF9C71EC1D825BCB00FDC95A /* NewsViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		CF1CFA4A1D8256E100FFF45E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CF1CFA4B1D8256E100FFF45E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CF9BA3431D8FF97A00EFC4B6 /* NewsTableViewCell.h */,
-				CF9BA3441D8FF97A00EFC4B6 /* NewsTableViewCell.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		CF1CFA4C1D8256E100FFF45E /* Notice */ = {
@@ -1690,6 +1689,22 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		CF748FDD1D93DB73007C2BAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF748FDE1D93DB73007C2BAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF748FDF1D93DB7E007C2BAA /* NewsTableViewCell.h */,
+				CF748FE01D93DB7E007C2BAA /* NewsTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CF8BFCD51D8647DF004916BF /* 自定义文件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1924,9 +1939,9 @@
 				CF2842411D824D140008BA3C /* MJRefreshHeader.m in Sources */,
 				04A6E9181D8285A40056E8CE /* YYImageCache.m in Sources */,
 				CF1CFA561D82572500FFF45E /* UIView_extra.m in Sources */,
+				CF748FE71D93DC0F007C2BAA /* NewsCommentTableViewCell.m in Sources */,
 				04A6E8F31D8285A40056E8CE /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				04A6E9321D8285A40056E8CE /* YYTextView.m in Sources */,
-				CFD7D8301D87A95A00FE627C /* HomePageCollectionViewCell.m in Sources */,
 				04A6E8F81D8285A40056E8CE /* NSObject+YYAddForKVO.m in Sources */,
 				CF2842581D824D1C0008BA3C /* MBProgressHUD.m in Sources */,
 				CF2842491D824D140008BA3C /* MJRefreshNormalHeader.m in Sources */,
@@ -1939,7 +1954,6 @@
 				CF2842431D824D140008BA3C /* MJRefreshAutoNormalFooter.m in Sources */,
 				CF28423D1D824D140008BA3C /* MJRefreshAutoFooter.m in Sources */,
 				CF8BFCF51D8647DF004916BF /* Customkongjian.m in Sources */,
-				CF9BA3451D8FF97A00EFC4B6 /* NewsTableViewCell.m in Sources */,
 				04A6E90E1D8285A40056E8CE /* YYKVStorage.m in Sources */,
 				CF2841631D824CE20008BA3C /* SDWebImageManager.m in Sources */,
 				04A6E91F1D8285A40056E8CE /* YYTextContainerView.m in Sources */,
@@ -1950,6 +1964,7 @@
 				04A6E93D1D8285A40056E8CE /* YYTransaction.m in Sources */,
 				CFD7D8331D87AFF000FE627C /* HomePageModel.m in Sources */,
 				CF8BFCFE1D8647DF004916BF /* UIColor+Categpry.m in Sources */,
+				CF748FE11D93DB7E007C2BAA /* NewsTableViewCell.m in Sources */,
 				04A6E83C1D82858F0056E8CE /* ViewController+MASAdditions.m in Sources */,
 				CF2841691D824CE20008BA3C /* UIImageView+WebCache.m in Sources */,
 				CF2840971D824C800008BA3C /* BaseviewController.m in Sources */,
@@ -1980,9 +1995,12 @@
 				CF2841E41D824D080008BA3C /* UIWebView+AFNetworking.m in Sources */,
 				CF2842311D824D140008BA3C /* MJExtensionConst.m in Sources */,
 				04A6E93E1D8285A40056E8CE /* YYWeakProxy.m in Sources */,
+				CF748FE41D93DBFF007C2BAA /* NewsCommentModel.m in Sources */,
 				CF8BFCF81D8647DF004916BF /* UICopyLable.m in Sources */,
 				CF2842461D824D140008BA3C /* MJRefreshBackNormalFooter.m in Sources */,
+				CF748FD61D93DAC1007C2BAA /* HomePageCollectionViewCell2.m in Sources */,
 				04A6E9071D8285A40056E8CE /* UIScreen+YYAdd.m in Sources */,
+				CF748FEA1D93DC1E007C2BAA /* NewsCommentViewController.m in Sources */,
 				04A6E92A1D8285A40056E8CE /* UIPasteboard+YYText.m in Sources */,
 				CF28423B1D824D140008BA3C /* README.md in Sources */,
 				CF2842451D824D140008BA3C /* MJRefreshBackGifFooter.m in Sources */,
@@ -2031,6 +2049,7 @@
 				CF2842591D824D1C0008BA3C /* README.mdown in Sources */,
 				04A6E8331D82858F0056E8CE /* MASCompositeConstraint.m in Sources */,
 				CF1CFA141D8253DF00FFF45E /* AppDelegate.m in Sources */,
+				CF748FD51D93DAC1007C2BAA /* HomePageCollectionViewCell.m in Sources */,
 				04A6E8FC1D8285A40056E8CE /* CALayer+YYAdd.m in Sources */,
 				CF9C71E41D825B0F00FDC95A /* HomePageViewController.m in Sources */,
 				CF9C71EA1D825BB700FDC95A /* NoticeViewController.m in Sources */,
@@ -2076,7 +2095,6 @@
 				CF2842331D824D140008BA3C /* MJProperty.m in Sources */,
 				04A6E8FE1D8285A40056E8CE /* UIApplication+YYAdd.m in Sources */,
 				CF8BFCF91D8647DF004916BF /* GetData.m in Sources */,
-				CF9BA33E1D8FE1DD00EFC4B6 /* HomePageCollectionViewCell2.m in Sources */,
 				04A6E8FD1D8285A40056E8CE /* YYCGUtilities.m in Sources */,
 				CF28416A1D824CE20008BA3C /* UIView+WebCacheOperation.m in Sources */,
 				04A6E90D1D8285A40056E8CE /* YYDiskCache.m in Sources */,
