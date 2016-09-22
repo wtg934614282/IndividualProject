@@ -96,7 +96,7 @@
 }
 
 -(void)layoutSubviews{
-    CGFloat width = self.contentView.size.width;
+    CGFloat width = self.contentView.frame.size.width;
     
     self.titleLabel.frame = CGRectMake(8, 0, width-16, 40);
     
