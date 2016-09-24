@@ -9,8 +9,8 @@
 #import "BaseviewController.h"
 
 @interface NewsDetailViewController : BaseviewController
-@property(nonatomic,copy) NSString *url;
-@property(nonatomic,copy) NSString *text;
+
+@property(nonatomic,copy) NSString *newsID;
 
 
  @end

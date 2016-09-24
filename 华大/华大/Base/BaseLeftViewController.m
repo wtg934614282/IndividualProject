@@ -64,7 +64,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
     UITouch *touch = [touches anyObject];
-    NSLog(@"touch = %@",touch.view);
+//    NSLog(@"touch = %@",touch.view);
     //重写方法的时候要注意一个问题
     [super touchesBegan:touches withEvent:event];
     //结束编辑，隐藏键盘

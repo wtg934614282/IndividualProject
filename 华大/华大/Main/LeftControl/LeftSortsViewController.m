@@ -12,6 +12,7 @@
 
 #import "TabBarViewController.h"
 #import "TestViewController.h"
+#import "LoginViewController.h"
 
 #define KColor(a,b,c)  [UIColor colorWithRed:a/255.f green:b/255.f blue:c/255.f alpha:1.0]
 
@@ -202,6 +203,9 @@
         NSLog(@"设置");
     }else if (sender.tag == 101){
         NSLog(@"登陆");
+        LoginViewController *login = [[LoginViewController alloc]init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:login];
+        [self presentViewController:nav animated:NO completion:nil];
     }else if (sender.tag == 102){
         NSLog(@"搜索");
     }

@@ -18,18 +18,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"评论";
     [self initTableView];
+    
+    [self ButtomView];
+}
+-(void)ButtomView{
+    UIView *buttomView = [[UIView alloc]init];
+    buttomView.frame = CGRectMake(0, KScreenHeight-58, KScreenWidth, 58);
+//    buttomView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:buttomView];
+    
+    UIView *line1 = [[UIView alloc]init];
+    line1.backgroundColor = [UIColor colorWithRed:220/255.f green:220/255.f blue:220/255.f alpha:1.0];
+    line1.frame = CGRectMake(0, 0, KScreenWidth, 1);
+    [buttomView addSubview:line1];
+    
+ 
+    UITextField *textField = [[UITextField alloc]init];
+    textField.frame = CGRectMake(8,5,KScreenWidth-8-8, 40);
+    textField.placeholder = @"评论";
+    textField.font = [UIFont systemFontOfSize:16];
+    textField.textColor = [UIColor blackColor];
+    textField.clearButtonMode = UITextFieldViewModeUnlessEditing;
+    [buttomView addSubview:textField];
+    
+    UIImageView *image = [[UIImageView alloc]init];
+    image.image = [UIImage imageNamed:@"iconfont-xiaoxi"];
+    image.contentMode = UIViewContentModeCenter;
+    image.frame = CGRectMake(25, 10, 44, 44);
+    textField.leftView = image;
+    textField.leftViewMode = UITextFieldViewModeAlways;
+    
+    UIView *line = [[UIView alloc]init];
+    line.backgroundColor = [UIColor colorWithRed:200/255.f green:200/255.f blue:200/255.f alpha:1.0];
+    line.frame = CGRectMake(8, 40, KScreenWidth-16, 1);
+    [buttomView addSubview:line];
+    
 }
 -(void)initTableView{
     
     self.tableview = [[UITableView alloc] init];
-    self.tableview.frame = CGRectMake(0, 0, self.view.frame.size.width, KScreenHeight-49);
+    self.tableview.frame = CGRectMake(0, 0, self.view.frame.size.width, KScreenHeight-58);
     self.tableview.dataSource = self;
     self.tableview.delegate  = self;
     self.tableview.rowHeight = 200;
     self.tableview.backgroundColor = KColor(232, 240, 238);
     self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableview];
+    
+    
     
     
     // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
@@ -59,19 +97,25 @@
     
 }
 
+
+
+
 //刷新数据
 -(void)loadNewData{
     
     
     
-    self.page = 1;
+    self.page = 0;
     [self.mainArray removeAllObjects];
     [_tableview reloadData];
     
-    NSString  *indexUrl = @"http://next.gouaixin.com/jiekou.php?m=Home&c=Index&a=newlist";
+    NSString  *indexUrl = @"http://next.gouaixin.com/jiekou.php?m=Home&c=Index&a=commentlist";
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setValue:[NSString stringWithFormat:@"%ld",(long)self.page] forKey:@"page"];
+    [dic setValue:self.newsID forKey:@"news_id"];
+    [dic setValue:[NSString stringWithFormat:@"%ld",(long)self.page] forKey:@"currentpage"];
+
+    
     //获得请求地址`
     //提交地址和参数
     [GetData requestURL:indexUrl
@@ -104,10 +148,12 @@
     
     
     self.page++;
-    NSString  *indexUrl = @"http://next.gouaixin.com/jiekou.php?m=Home&c=Index&a=newlist";
+    NSString  *indexUrl = @" http://next.gouaixin.com/jiekou.php?m=Home&c=Index&a=commentlist";
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setValue:[NSString stringWithFormat:@"%ld",(long)self.page] forKey:@"page"];
+    [dic setValue:self.newsID forKey:@"news_id"];
+    [dic setValue:self.newsID forKey:@"currentpage"];
+
     //获得请求地址`
     //提交地址和参数
     [GetData requestURL:indexUrl

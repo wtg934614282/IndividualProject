@@ -214,7 +214,9 @@
 		CF9C71ED1D825BCB00FDC95A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71EC1D825BCB00FDC95A /* NewsViewController.m */; };
 		CF9C71F31D82648C00FDC95A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9C71F21D82648C00FDC95A /* MineViewController.m */; };
 		CFBDC3DD1D83A87900821FDD /* other2.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBDC3DC1D83A87900821FDD /* other2.m */; };
+		CFC62F8D1D94DB2600AEF388 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC62F8C1D94DB2600AEF388 /* LoginViewController.m */; };
 		CFD7D8331D87AFF000FE627C /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D8321D87AFF000FE627C /* HomePageModel.m */; };
+		CFF031C31D9668E90058F362 /* NewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF031C21D9668E90058F362 /* NewsDetailModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -623,9 +625,13 @@
 		CF9C71F21D82648C00FDC95A /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		CFBDC3DB1D83A87900821FDD /* other2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = other2.h; sourceTree = "<group>"; };
 		CFBDC3DC1D83A87900821FDD /* other2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = other2.m; sourceTree = "<group>"; };
+		CFC62F8B1D94DB2600AEF388 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CFC62F8C1D94DB2600AEF388 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CFD7D8311D87AFF000FE627C /* HomePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageModel.h; sourceTree = "<group>"; };
 		CFD7D8321D87AFF000FE627C /* HomePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageModel.m; sourceTree = "<group>"; };
 		CFE89DAC1D8250110003D006 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CFF031C11D9668E90058F362 /* NewsDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailModel.h; sourceTree = "<group>"; };
+		CFF031C21D9668E90058F362 /* NewsDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1232,6 +1238,8 @@
 			children = (
 				CFD7D8311D87AFF000FE627C /* HomePageModel.h */,
 				CFD7D8321D87AFF000FE627C /* HomePageModel.m */,
+				CFF031C11D9668E90058F362 /* NewsDetailModel.h */,
+				CFF031C21D9668E90058F362 /* NewsDetailModel.m */,
 				CF748FE21D93DBFF007C2BAA /* NewsCommentModel.h */,
 				CF748FE31D93DBFF007C2BAA /* NewsCommentModel.m */,
 			);
@@ -1399,6 +1407,7 @@
 		CF2840981D824C920008BA3C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CFC62F8A1D94DB0100AEF388 /* LoginViewController */,
 				CF1CFA211D8256E100FFF45E /* LeftControl */,
 				CF1CFA221D8256E100FFF45E /* LeftSIdeViewController */,
 				CF1CFA3F1D8256E100FFF45E /* MainViewController */,
@@ -1822,6 +1831,15 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		CFC62F8A1D94DB0100AEF388 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFC62F8B1D94DB2600AEF388 /* LoginViewController.h */,
+				CFC62F8C1D94DB2600AEF388 /* LoginViewController.m */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
 		CFE89DAA1D824FE80003D006 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -2017,6 +2035,7 @@
 				04A6E8EF1D8285A40056E8CE /* NSBundle+YYAdd.m in Sources */,
 				04A6E8FF1D8285A40056E8CE /* UIBarButtonItem+YYAdd.m in Sources */,
 				04A6E8361D82858F0056E8CE /* MASLayoutConstraint.m in Sources */,
+				CFC62F8D1D94DB2600AEF388 /* LoginViewController.m in Sources */,
 				CF2842351D824D140008BA3C /* MJPropertyType.m in Sources */,
 				CF2841671D824CE20008BA3C /* UIImage+MultiFormat.m in Sources */,
 				04A6E92C1D8285A40056E8CE /* YYTextAttribute.m in Sources */,
@@ -2068,6 +2087,7 @@
 				04A6E91B1D8285A40056E8CE /* YYWebImageManager.m in Sources */,
 				04A6E9241D8285A40056E8CE /* YYTextLayout.m in Sources */,
 				04A6E9121D8285A40056E8CE /* MKAnnotationView+YYWebImage.m in Sources */,
+				CFF031C31D9668E90058F362 /* NewsDetailModel.m in Sources */,
 				CF992C821D8268D800F160A3 /* XRCarouselView.m in Sources */,
 				04A6E9191D8285A40056E8CE /* YYImageCoder.m in Sources */,
 				CF2842481D824D140008BA3C /* MJRefreshGifHeader.m in Sources */,

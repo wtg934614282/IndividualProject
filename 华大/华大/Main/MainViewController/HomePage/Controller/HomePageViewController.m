@@ -314,7 +314,10 @@ static NSString *const cellId2 = @"cellId2";
 // 选中某item
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    HomePageModel *model = self.mainArray[indexPath.row];
     NewsDetailViewController *news= [[NewsDetailViewController alloc]init];
+    news.hidesBottomBarWhenPushed = YES;    //用来隐藏标签栏
+    news.newsID = model.newid;
     [self.navigationController pushViewController:news animated:YES];
 }
 

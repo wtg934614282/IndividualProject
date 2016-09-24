@@ -95,6 +95,8 @@
                       
                       if (success) {
                           success(responseObject);
+                          NSLog (@"%@",responseObject);
+
                       }
                       
                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

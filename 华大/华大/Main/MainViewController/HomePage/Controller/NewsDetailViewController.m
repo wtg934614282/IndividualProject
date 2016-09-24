@@ -7,12 +7,28 @@
 //
 
 #import "NewsDetailViewController.h"
+#import "NewsCommentViewController.h"
+#import "NewsDetailModel.h"
+@interface NewsDetailViewController()
+@property(nonatomic,strong)NewsDetailModel *mainModel;
+
+@property(nonatomic,strong)UIScrollView *mainScrollerView;
+@property(nonatomic,strong)UILabel *titleLabel;
+@property(nonatomic,strong)UILabel *pensonLabel;
+@property(nonatomic,strong)UILabel *timeLabel;
+@property(nonatomic,strong)UIImageView *imageView;
+
+
+
+@property(nonatomic,strong)UILabel *mainLabel;
+@end
 
 @implementation NewsDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initWithWEb];
+    [self initWithAll];
+    [self getData];
  
     [self rightButton];
     
@@ -58,80 +74,93 @@
 }
 
 -(void)xiaoxi{
+    NewsCommentViewController *comment  = [[NewsCommentViewController alloc]init];
+    comment.newsID = self.newsID;
+    [self .navigationController pushViewController:comment animated:YES];
     
 }
 
+-(void)initWithAll{
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.mainScrollerView = [[UIScrollView alloc]init];
+    self.mainScrollerView.frame = self.view.frame;
+    [self.view addSubview:self.mainScrollerView];
+    
+    self.titleLabel = [[UILabel alloc]init];
+    self.titleLabel.font = [UIFont systemFontOfSize:16];
+    self.titleLabel.textColor = KColor(1, 1, 1);
+    self.titleLabel.numberOfLines = 0;
+//    [self.titleLabel sizeToFit];
+    [self.mainScrollerView addSubview:self.titleLabel];
+    
+    
+    self.pensonLabel = [[UILabel alloc]init];
+    self.pensonLabel.font = [UIFont systemFontOfSize:10];
+    self.pensonLabel.textColor = KColor(121, 121, 121);
+    [self.mainScrollerView addSubview:self.pensonLabel];
+    
+    self.timeLabel = [[UILabel alloc]init];
+    self.timeLabel.font = [UIFont systemFontOfSize:10];
+    self.timeLabel.textColor = KColor(121, 121, 121);
+    [self.mainScrollerView addSubview:self.timeLabel];
+    
+    self.imageView = [[UIImageView alloc]init];
+    [self.mainScrollerView addSubview:self.imageView];
+    
+    self.mainLabel = [[UILabel alloc]init];
+    self.mainLabel.font = [UIFont systemFontOfSize:13];
+    self.mainLabel.textColor = KColor(121, 121, 121);
+    self.mainLabel.numberOfLines = 0;
+    [self.mainScrollerView addSubview:self.mainLabel];
+}
 
-
--(void)initWithWEb{
+-(void)getData{
     self.automaticallyAdjustsScrollViewInsets=NO;
     
-    UIWebView *web = [[UIWebView alloc]init];
-//    web.delegate = self;
-    web.frame = CGRectMake(0, 64, KScreenWidth, KScreenHeight-64);
-    NSLog(@"self.url = %@", self.url);
+    NSString  *indexUrl = @"http://next.gouaixin.com/jiekou.php?m=Home&c=Index&a=newinfo";
     
-    NSString *str = [NSString stringWithFormat:@"self.url"];
-    NSLog(@"%@",[str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]);
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setValue:self.newsID forKey:@"newid"];
+    //获得请求地址`
+    //提交地址和参数
+    [GetData requestURL:indexUrl
+             httpMethod:@"POST"
+                 params:dic
+                   file:nil
+                success:^(id data) {
+                    
+                    self.mainModel = [NewsDetailModel mj_objectWithKeyValues:data[@"data"]];
+                    [self layoutView];
+                   
+                }
+                   fail:^(NSError *error) {
+                   }];
+}
+-(void)layoutView{
+    self.titleLabel.text = self.mainModel.newtitle;
+    CGSize titleS = [self sizeWithText:self.mainModel.newtitle font:[UIFont systemFontOfSize:16] maxW:KScreenWidth-16];
+    self.titleLabel.frame = CGRectMake(8, 64, KScreenWidth-16, titleS.height);
     
-    //     [self.url stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]
-    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:[self.url stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]]];
-    [self.view addSubview: web];
-    [web loadRequest:request];
+    
+    self.pensonLabel.text = self.mainModel.bumen;
+    self.pensonLabel.frame = CGRectMake(8,  CGRectGetMaxY(self.titleLabel.frame),KScreenWidth-16, 20);
+    
+    self.timeLabel.text = self.mainModel.shijian;
+    self.timeLabel.frame = CGRectMake(8,  CGRectGetMaxY(self.pensonLabel.frame),KScreenWidth-16, 20);
+
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.mainModel.newimage]];
+    self.imageView.frame = CGRectMake(8,  CGRectGetMaxY(self.timeLabel.frame),KScreenWidth-16, 150);
+    
+    
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[self.mainModel.newcontent dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+
+    self.mainLabel.attributedText = attrStr;
+    CGSize mainL = [self sizeWithText:self.mainModel.newcontent font:[UIFont systemFontOfSize:13] maxW:KScreenWidth-16];
+    self.mainLabel.frame = CGRectMake(8,  CGRectGetMaxY(self.imageView.frame),KScreenWidth-16, mainL.height);
+    
+    self.mainScrollerView.contentSize = CGSizeMake(KScreenWidth, CGRectGetMaxY(self.mainLabel.frame));
+    
 }
 
-#pragma mark - 网页代理UIWebViewDelegate
-//
-//-(void)webViewDidStartLoad:(UIWebView *)webView{
-//    _HUD = [[MBProgressHUD alloc] initWithView:self.view];
-//    [self.view addSubview:_HUD];
-////    _HUD.labelText = @"网络请求超时";
-////    _HUD.labelFont = [UIFont systemFontOfSize:14];
-//    _HUD.mode = MBProgressHUDModeIndeterminate;
-//
-////    [_HUD showAnimated:YES whileExecutingBlock:^{
-////        sleep(2);
-////    } completionBlock:^{
-////        [HUD removeFromSuperview];
-////    }];
-//    [_HUD show:YES];
-//    WEAKSELF(weakSelf)
-//    [UIView animateWithDuration:0.5 animations:^{
-//        _holdLab = [[UILabel alloc] initWithFrame:CGRectMake((KScreenWidth-150)/2, KScreenHeight/2+100, 150, 20)];
-//        _holdLab.text = @"加载中，请稍等～";
-//        _holdLab.textAlignment = NSTextAlignmentCenter;
-//        _holdLab.textColor = [UIColor grayColor];
-//        [weakSelf.view addSubview:_holdLab];
-//    }];
-//
-//}
-//
-//-(void)webViewDidFinishLoad:(UIWebView *)webView{
-//    [_HUD removeFromSuperview];
-//    [_holdLab removeFromSuperview];
-//}
-//
-//-(void)viewWillDisappear:(BOOL)animated{
-//    [super viewWillDisappear:animated];
-//    if (_HUD) {
-//        [_HUD removeFromSuperview];
-//        [_holdLab removeFromSuperview];
-//    }
-//}
-//
-//-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-//    [_holdLab removeFromSuperview];
-//    MBProgressHUD *HUDDD = [[MBProgressHUD alloc] initWithView:self.view];
-//    [self.view addSubview:HUDDD];
-//    HUDDD.labelText = @"网络请求超时,请重试";
-//    HUDDD.labelFont = [UIFont systemFontOfSize:14];
-//    HUDDD.mode = MBProgressHUDModeText;
-//    [HUDDD showAnimated:YES whileExecutingBlock:^{
-//        sleep(2);
-//    } completionBlock:^{
-//        [_HUD removeFromSuperview];
-//        [HUDDD removeFromSuperview];
-//    }];
-//}
 
 @end
